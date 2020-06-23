@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ingreso-egreso-app-def80": {
+      "hosting": {
+        "prueba": [
+          "ingreso-egreso-app-def80"
+        ]
+      }
+    }
+  }
+}
