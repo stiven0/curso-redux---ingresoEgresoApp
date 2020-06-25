@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { environment } from '../environments/environment';
 
@@ -11,8 +12,12 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 // Modulos
 import { AppRoutingModule } from './app-routing.module';
 
+// pipes
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe';
 
-import { ReactiveFormsModule } from '@angular/forms';
+// chartJS
+import { ChartsModule } from 'ng2-charts';
+
 
 // Ngrx
 import { StoreModule } from '@ngrx/store';
@@ -44,7 +49,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenIngresoPipe
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

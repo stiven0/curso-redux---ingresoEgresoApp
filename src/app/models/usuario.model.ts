@@ -2,8 +2,8 @@
 
 export class Usuario {
 
-    static formFirebase( { uid, name, email } ) {
-        return new Usuario( uid, name, email );
+    static formFirebase( { uid, nombre, email } ) {
+        return new Usuario( uid, nombre, email );
     }
 
     constructor(
