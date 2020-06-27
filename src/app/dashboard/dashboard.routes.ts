@@ -4,7 +4,6 @@ import { IngresoEgresoComponent } from '../ingreso-egreso/ingreso-egreso.compone
 import { DetalleComponent } from '../ingreso-egreso/detalle/detalle.component';
 
 
-
 export const dashboardRoutes: Routes = [
 
  { path: '', component: EstadisticaComponent },

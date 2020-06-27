@@ -5,6 +5,7 @@ import { IngresoEgresoService } from '../../services/ingreso-egreso.service';
 
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.reducer';
+import { AppStateWithIngreso } from '../ingreso-egreso.reducer';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -21,7 +22,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   ingresosEgresos: IngresoEgreso[] = [];
   private _destroyed$ = new Subject();
 
-  constructor( private store: Store<AppState>,
+  constructor( private store: Store<AppStateWithIngreso>,
                private ingresoEgresoService: IngresoEgresoService) { }
 
   ngOnInit() {
